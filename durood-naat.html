@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="ur" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>شانِ رسول ﷺ - نعت و درود</title>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Lateef&display=swap');
+
+    body {
+      margin: 0;
+      background: linear-gradient(135deg, #0a1a2f, #020617);
+      color: #fff8dc;
+      font-family: 'Lateef', serif;
+      display: flex;
+      flex-direction: column;
+      min-height: 100vh;
+      padding: 30px 20px;
+      text-align: center;
+      justify-content: center;
+    }
+
+    h1 {
+      font-size: 4rem;
+      color: #ffda44;
+      text-shadow: 0 0 15px #ffda44, 0 0 40px #ffb700;
+      margin-bottom: 25px;
+    }
+
+    .poem, .durood {
+      background: rgba(255, 255, 255, 0.05);
+      border-radius: 20px;
+      padding: 25px;
+      max-width: 700px;
+      margin: 0 auto 30px;
+      box-shadow: 0 0 30px #ffda44;
+      font-size: 1.7rem;
+      line-height: 2.3;
+    }
+
+    .durood {
+      font-weight: bold;
+      color: #f9f5e3;
+      font-size: 1.5rem;
+      background: rgba(255, 215, 0, 0.1);
+      box-shadow: 0 0 25px #ffea00;
+    }
+
+    button {
+      background: #ffda44;
+      border: none;
+      padding: 15px 45px;
+      font-size: 1.3rem;
+      font-weight: 700;
+      border-radius: 50px;
+      cursor: pointer;
+      color: #1a1a1a;
+      box-shadow: 0 0 20px #ffda44;
+      transition: 0.3s ease;
+      margin-bottom: 20px;
+    }
+
+    button:hover {
+      background: #fff;
+      color: #ffda44;
+      box-shadow: 0 0 40px #ffda44;
+      transform: scale(1.1);
+    }
+
+    audio {
+      https://archive.org/download/DukhiDilanDaSahara/DukhiDilanDaSahara.mp3
+
+    }
+  </style>
+</head>
+<body>
+
+  <h1>ﷺ شانِ رسول ﷺ</h1>
+
+  <div class="poem" id="naat">
+    مدینے کے گلی کوچوں میں ہے خوشبو تیرے چلنے کی<br/>
+    کعبے کے گنبد میں ہے نور تیرے آنے کی<br/>
+    لاکھوں دلوں کے سکون ہیں، دل کے ارمان تیرے<br/>
+    مصطفیٰ کے صدقے جائے جہاں جہاں تجھ پر سلام
+  </div>
+
+  <div class="durood" id="durood">
+    اللّٰھُم صَلِّ عَلٰی مُحَمَّدٍ وَعَلٰی آلِ مُحَمَّدٍ كَمَا صَلَّيْتَ عَلٰی إِبْرٰھِيْمَ وَعَلٰی آلِ إِبْرٰھِيْمَ إِنَّكَ حَمِيْدٌ مَّجِيْدٌ<br/>
+    اللّٰھُم بَارِكْ عَلٰی مُحَمَّدٍ وَعَلٰی آلِ مُحَمَّدٍ كَمَا بَارَكْتَ عَلٰی إِبْرٰھِيْمَ وَعَلٰی آلِ إِبْرٰھِيْمَ إِنَّكَ حَمِيْدٌ مَّجِيْدٌ
+  </div>
+
+  <button id="toggleAudioBtn">نعت سنیں / بند کریں</button>
+
+  <audio id="naatAudio" loop>
+    <source src="https://archive.org/download/DukhiDilanDaSahara/DukhiDilanDaSahara.mp3" type="audio/mpeg">
+    آپ کا براؤزر آڈیو سپورٹ نہیں کرتا۔
+  </audio>
+
+  <script>
+    const naatAudio = document.getElementById('naatAudio');
+    const toggleBtn = document.getElementById('toggleAudioBtn');
+    let isPlaying = false;
+
+    toggleBtn.addEventListener('click', () => {
+      if (isPlaying) {
+        naatAudio.pause();
+        toggleBtn.textContent = "نعت سنیں / بند کریں";
+      } else {
+        naatAudio.play();
+        toggleBtn.textContent = "نعت بند کریں";
+      }
+      isPlaying = !isPlaying;
+    });
+  </script>
+
+</body>
+</html>
